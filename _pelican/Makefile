@@ -4,9 +4,10 @@ PELICANOPTS=
 
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/content
-OUTPUTDIR=$(BASEDIR)/..
+OUTPUTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
+PUBLISHDIR=$(BASEDIR)/..
 
 GITHUB_PAGES_BRANCH=gh-pages
 
@@ -72,6 +73,6 @@ else
 endif
 
 publish:
-	$(PELICAN) "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(PUBLISHCONF)" $(PELICANOPTS)
+	$(PELICAN) "$(INPUTDIR)" -o "$(PUBLISHDIR)" -s "$(PUBLISHCONF)" $(PELICANOPTS)
 
 .PHONY: html help clean regenerate serve serve-global devserver stopserver publish
