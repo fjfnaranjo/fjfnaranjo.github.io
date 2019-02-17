@@ -33,3 +33,4 @@ DEFAULT_PAGINATION = 10
 #RELATIVE_URLS = True
 
 THEME = 'theme'
+PAGE_ORDER_BY = 'sortorder'
